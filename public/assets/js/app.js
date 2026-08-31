@@ -1,3 +1,10 @@
+(() => {
+  const mobileCss = document.createElement('link');
+  mobileCss.rel = 'stylesheet';
+  mobileCss.href = 'assets/css/mobile.css';
+  document.head.appendChild(mobileCss);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('[data-header]');
   const menu = document.querySelector('[data-menu]');
