@@ -1,0 +1,92 @@
+@media (max-width: 700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{background:#f7f3e9}
+  .site-header.aruna-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;padding:12px 16px!important;min-height:70px!important;box-shadow:0 8px 28px rgba(0,0,0,.18)!important}
+  .aruna-logo{gap:9px!important;min-width:0}
+  .aruna-logo-symbol{width:42px!important;height:42px!important;font-size:22px!important;flex:0 0 42px}
+  .aruna-logo-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;min-width:0}
+  .aruna-logo-copy b{font-size:20px!important;line-height:1!important;letter-spacing:.06em!important;white-space:nowrap}
+  .aruna-logo-copy small{font-size:6.5px!important;letter-spacing:.26em!important;margin-top:4px!important}
+  .aruna-logo-copy em{display:none!important}
+  .menu-toggle{display:block!important;font-size:14px!important;padding:10px 0!important;margin-left:auto!important}
+  .site-header nav.open{padding:100px 24px 40px!important;gap:22px!important;background:#072219!important}
+  .site-header nav.open a{font-size:20px!important}
+  .site-header nav.open .nav-cta{padding:14px 18px!important}
+
+  .hero.hero-premium{min-height:100svh!important;height:auto!important;padding-top:70px!important;display:flex!important;align-items:stretch!important}
+  .hero-premium video,.hero-premium .hero-photo{object-position:center center!important}
+  .hero-premium .hero-shade{background:linear-gradient(180deg,rgba(4,22,16,.22) 0%,rgba(4,22,16,.38) 36%,rgba(4,22,16,.78) 72%,rgba(4,22,16,.94) 100%)!important}
+  .hero-content{width:100%!important;max-width:none!important;margin:0!important;padding:110px 18px 36px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;min-height:calc(100svh - 70px)!important}
+  .hero-content .eyebrow{font-size:9px!important;letter-spacing:.16em!important;margin:0 0 12px!important}
+  .hero h1{font-size:clamp(44px,14vw,62px)!important;line-height:.93!important;letter-spacing:-.035em!important;max-width:100%!important;margin:0 0 18px!important;word-break:normal!important;overflow-wrap:normal!important}
+  .hero-content>p:not(.eyebrow){font-size:16px!important;line-height:1.55!important;max-width:100%!important;margin:0 0 22px!important}
+  .hero-actions{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:14px!important;margin:0 0 24px!important}
+  .btn-gold{padding:14px 20px!important;font-size:12px!important}
+  .hero-actions .text-link{font-size:12px!important}
+  .hero-caption{display:none!important}
+
+  .aruna-search{display:grid!important;grid-template-columns:1fr!important;width:100%!important;max-width:100%!important;margin:0!important;border-radius:16px!important;overflow:hidden!important;box-shadow:0 18px 45px rgba(0,0,0,.22)!important}
+  .aruna-search .search-field{min-height:68px!important;padding:15px 16px 13px 50px!important;border-right:0!important;border-bottom:1px solid #e7e2d7!important}
+  .aruna-search .search-field-icon{left:17px!important;top:23px!important;width:19px!important;height:19px!important}
+  .aruna-search label{font-size:8px!important;margin-bottom:4px!important}
+  .aruna-search input,.aruna-search select{font-size:13px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .aruna-search button{min-width:0!important;width:100%!important;min-height:58px!important;padding:16px 20px!important;font-size:13px!important;justify-content:space-between!important}
+
+  .premium-trust{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;gap:0!important;padding:0!important;background:#faf7ef!important;scrollbar-width:none}
+  .premium-trust::-webkit-scrollbar{display:none}
+  .premium-trust>div{flex:0 0 78%!important;min-width:78%!important;scroll-snap-align:start!important;padding:18px 18px 18px 62px!important;border-right:1px solid #e4ddcf!important;border-bottom:0!important;min-height:82px!important}
+  .premium-trust .trust-icon{left:16px!important;width:30px!important;height:30px!important}
+  .premium-trust strong{font-size:11px!important}
+  .premium-trust>div>span:last-child{font-size:9px!important}
+
+  .premium-intro{width:100%!important;padding:72px 18px!important}
+  .premium-intro h2{font-size:38px!important;line-height:1.05!important}
+  .premium-intro>p:last-of-type{font-size:14px!important;line-height:1.7!important}
+  .premium-intro .benefits{grid-template-columns:1fr!important;gap:14px!important;margin-top:34px!important}
+  .premium-intro .benefits article{min-height:auto!important;padding:24px!important}
+
+  .jaguar-story,.destination-feature{grid-template-columns:1fr!important;min-height:0!important}
+  .jaguar-photo{min-height:390px!important}
+  .jaguar-photo img{min-height:390px!important;height:390px!important}
+  .story-copy,.destination-copy{padding:52px 20px!important}
+  .story-copy h2,.destination-copy h2{font-size:42px!important}
+  .story-copy blockquote{font-size:20px!important}
+  .destination-feature>img{min-height:360px!important;height:360px!important}
+
+  .tours-section{width:100%!important;padding:72px 18px!important}
+  .section-title{display:block!important}
+  .section-title h2{font-size:40px!important}
+  .tour-grid{grid-template-columns:1fr!important}
+  .tour-image{height:260px!important}
+
+  .editorial-gallery{padding:72px 18px!important}
+  .gallery-heading h2{font-size:40px!important}
+  .editorial-gallery .editorial-grid{grid-template-columns:1fr!important;grid-template-rows:auto!important}
+  .editorial-gallery .editorial-grid figure,.editorial-gallery .editorial-grid figure.large{grid-row:auto!important;height:300px!important}
+
+  .testimonials{padding:72px 18px!important}
+  .testimonials h2{font-size:40px!important}
+  .testimonial-grid{grid-template-columns:1fr!important}
+
+  .faq-section{width:100%!important;grid-template-columns:1fr!important;gap:36px!important;padding:72px 18px!important}
+  .faq-section h2{font-size:40px!important}
+
+  .brand-manifesto{min-height:300px!important;padding:50px 18px!important}
+  .brand-manifesto p{font-size:38px!important}
+
+  .footer-premium{grid-template-columns:1fr!important;gap:34px!important;padding:50px 20px!important}
+  .whatsapp-float{width:56px!important;height:56px!important;right:16px!important;bottom:16px!important}
+
+  .contact-hero{min-height:520px!important;padding:120px 20px 60px!important}
+  .contact-hero h1{font-size:48px!important}
+  .contact-methods{width:calc(100% - 36px)!important;grid-template-columns:1fr!important;margin:-26px auto 0!important}
+  .contact-premium-grid{width:100%!important;grid-template-columns:1fr!important;gap:40px!important;padding:72px 18px!important}
+  .contact-form-card{padding:24px 18px!important}
+}
+
+@media (max-width: 390px){
+  .hero-content{padding-left:14px!important;padding-right:14px!important}
+  .hero h1{font-size:42px!important}
+  .aruna-search input,.aruna-search select{font-size:12px!important}
+  .premium-trust>div{flex-basis:86%!important;min-width:86%!important}
+}
