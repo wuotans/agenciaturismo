@@ -1,0 +1,12 @@
+<?php
+require_once __DIR__ . '/_auth.php';
+require_admin();
+$id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$tour = ['title'=>'','slug'=>'','short_description'=>'','description'=>'','location'=>'','duration'=>'','category'=>'','price_from'=>'','featured'=>0,'active'=>1,'cover_image'=>''];
+if ($id) {
+    $stmt = db()->prepare('SELECT * FROM tours WHERE id = :id');
+    $stmt->execute(['id'=>$id]);
+    $tour = $stmt->fetch() ?: $tour;
+}
+?>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title><?= $id ? 'Editar' : 'Novo' ?> passeio</title><link rel="stylesheet" href="../assets/css/app.css"></head><body class="admin-shell"><header class="admin-top"><strong><?= $id ? 'Editar passeio' : 'Novo passeio' ?></strong><a href="index.php">Voltar</a></header><main class="admin-main"><section class="admin-panel"><form class="admin-form" method="post" action="passeio-salvar.php" enctype="multipart/form-data"><input type="hidden" name="id" value="<?= $id ?>"><div class="two"><label>Título<input name="title" required value="<?= e($tour['title']) ?>"></label><label>Slug<input name="slug" required value="<?= e($tour['slug']) ?>" placeholder="expedicao-onca-pintada"></label></div><label>Resumo<input name="short_description" maxlength="300" required value="<?= e($tour['short_description']) ?>"></label><label>Descrição<textarea name="description" required><?= e($tour['description']) ?></textarea></label><div class="two"><label>Local<input name="location" required value="<?= e($tour['location']) ?>"></label><label>Duração<input name="duration" required value="<?= e($tour['duration']) ?>"></label></div><div class="two"><label>Categoria<input name="category" required value="<?= e($tour['category']) ?>"></label><label>Preço a partir de<input type="number" step="0.01" min="0" name="price_from" value="<?= e((string)$tour['price_from']) ?>"></label></div><div class="two"><label>Imagem de capa<input type="file" name="cover_image" accept="image/jpeg,image/png,image/webp"></label><label>Imagem atual<input value="<?= e($tour['cover_image']) ?>" disabled></label></div><div class="two"><label><input type="checkbox" name="featured" value="1" <?= $tour['featured'] ? 'checked' : '' ?>> Exibir como destaque</label><label><input type="checkbox" name="active" value="1" <?= $tour['active'] ? 'checked' : '' ?>> Passeio ativo</label></div><button class="btn" type="submit">Salvar passeio</button></form></section></main></body></html>
